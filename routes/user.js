@@ -150,7 +150,7 @@ router.get('/checkToken', auth.authenticateToken, (req, res) => {
 })
 
 //User change Password API
-router.post('/changePasssword', auth.authenticateToken, (req, res) => {
+router.post('/changePassword', auth.authenticateToken, (req, res) => {
     const user = req.body;
     const email = res.locals.email;
     var query = "select *from user where email=? and password=?";
